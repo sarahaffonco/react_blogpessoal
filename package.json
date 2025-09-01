@@ -10,8 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< main
+=======
+    "@phosphor-icons/react": "^2.1.10",
+    "@tailwindcss/vite": "^4.1.12",
+>>>>>>> local
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "tailwindcss": "^4.1.12"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
