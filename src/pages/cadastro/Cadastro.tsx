@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useState, type ChangeEvent, type FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
@@ -23,7 +25,6 @@ function Cadastro() {
     if (usuario.id !== 0) {
       retornar();
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [usuario]);
 
   function retornar() {
@@ -50,7 +51,6 @@ function Cadastro() {
       try {
         await cadastrarUsuario(`/usuarios/cadastrar`, usuario, setUsuario);
         alert("Usuário cadastrado com sucesso!");
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (error) {
         alert("Erro ao cadastrar o usuário!");
       }
