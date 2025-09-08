@@ -13,6 +13,7 @@ import { AuthContext } from "../../../contexts/AuthContext";
 import type Postagem from "../../../models/Postagem";
 import type Tema from "../../../models/Tema";
 import { atualizar, buscar, cadastrar } from "../../../services/Service";
+import { ToastAlerta } from "../../../utils/ToastAlert";
 
 function FormPostagem() {
   const navigate = useNavigate();
@@ -68,7 +69,7 @@ function FormPostagem() {
 
   useEffect(() => {
     if (token === "") {
-      alert("Você precisa estar logado");
+      ToastAlerta('Você precisa estar logado', 'info');
       navigate("/");
     }
   }, [token]);

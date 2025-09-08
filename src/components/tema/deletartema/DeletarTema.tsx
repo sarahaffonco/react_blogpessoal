@@ -6,6 +6,7 @@ import { AuthContext } from "../../../contexts/AuthContext";
 import type Tema from "../../../models/Tema";
 import { buscar, deletar } from "../../../services/Service";
 import { ClipLoader } from "react-spinners";
+import { ToastAlerta } from "../../../utils/ToastAlert";
 
 function DeletarTema() {
   const navigate = useNavigate();
@@ -35,7 +36,7 @@ function DeletarTema() {
 
   useEffect(() => {
     if (token === "") {
-      alert("Você precisa estar logado");
+      ToastAlerta('Você precisa estar logado', 'info');
       navigate("/");
     }
   }, [token]);
