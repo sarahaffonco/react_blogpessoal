@@ -71,12 +71,12 @@ function FormTema() {
         await atualizar(`/temas`, tema, setTema, {
           headers: { Authorization: token },
         });
-        alert("O Tema foi atualizado com sucesso!");
+        ToastAlerta('Tema atualizado com sucesso', 'success');
       } catch (error: any) {
         if (error.toString().includes("401")) {
           handleLogout();
         } else {
-          alert("Erro ao atualizar o tema.");
+        ToastAlerta('Erro ao atualizar o tema.', 'error');
         }
       }
     } else {
