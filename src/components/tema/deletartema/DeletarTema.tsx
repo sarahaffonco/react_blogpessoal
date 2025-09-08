@@ -57,7 +57,7 @@ function DeletarTema() {
         },
       });
 
-      alert("Tema deletado com sucesso");
+      ToastAlerta('Tema deletado com sucesso', 'success');
     } catch (error: any) {
       if (error.toString().includes("401")) {
         handleLogout();
